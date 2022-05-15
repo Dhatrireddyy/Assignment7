@@ -1,0 +1,108 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+
+\title{Assignment 7: CBSE Probability Grade 12 }
+\author{Dhatri Reddy}
+\date{\today}
+\logo{\large \LaTeX{}}
+
+\usepackage{amsmath}
+\setbeamertemplate{caption}[numbered]{}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+\logo{}
+
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+\section{Question}
+\begin{frame}{Question}
+    \begin{block}{Exercise 13.3.3}
+        Of the students in a college, it is known that 60\% reside in hostel and 40\% are day scholars (not residing in hostel). Previous year results report that 30\% of all students who reside in hostel attain A grade and 20\% of day scholars attain A grade in their annual examination. At the end of the year, one student is chosen at random from the college and he has an A grade, what is the probability that the student is a hostler?
+    \end{block}
+\end{frame}
+
+\section{Defining random variables}
+\begin{frame}
+\frametitle{Solution}
+Let random variables $X, Y \in \cbrak{0,1}$ denote the following events in Table \eqref{table:table-1}
+\begin{table}[ht!]
+\centering
+	\input{tables/table-1}
+	\vspace*{5pt}
+\caption{Random variables}
+	\label{table:table-1}
+\end{table}
+\end{frame}
+
+\section{Values of probabilities}
+\begin{frame}
+\frametitle{}
+\begin{align}
+    \pr{X=0} &= 60\% \\
+    &= 0.6
+\end{align}
+
+\begin{align}
+    \pr{X=1} &= 40\% \\
+    &= 0.4
+\end{align}
+
+\begin{align}
+    \pr{Y=0|X=0} &= 30\% \\
+    &= 0.3
+\end{align}
+
+\begin{align}
+    \pr{Y=0|X=1} &= 20\% \\
+    &= 0.2
+\end{align}
+\end{frame}
+
+\section{Table for probabilities}
+\begin{frame}{}
+    \begin{table}[ht!]
+\centering
+	\input{tables/table-2}
+	\vspace*{5pt}
+\caption{Values of probabilities}
+	\label{table:table-2}
+\end{table}
+
+\end{frame}
+
+\section{Solving}
+\begin{frame}{}
+    Probability that the student selected is a hostler, if he has an A grade is 
+\begin{align}
+    &\pr{X=0|Y=0} \\ 
+	&= \frac{\pr{X = 0,Y = 0}}{\pr{Y = 0}} \\
+	&= \frac{\pr{Y = 0|X = 0}\pr{X = 0}}{\sum_{i=0}^1 \pr{Y = 0, X=i}} \\
+	&= \frac{\pr{Y = 0|X = 0}\pr{X = 0}}{\sum_{i=0}^1 \pr{Y=0|X=i}\pr{X = i}}
+\end{align}
+\end{frame}
+
+\section{Substitution}
+\begin{frame}{}
+    On substituting the values from Table \eqref{table:table-2} we get:
+\begin{align}
+	\pr{X=0|Y=0} &= \frac{0.3 \times 0.6}{0.3 \times 0.6 + 0.2 \times 0.4}\\
+	&= \frac{0.18}{0.26}\\
+	&= \frac{9}{13} \approx 0.69
+\end{align}
+
+\begin{block}{}
+Probability that the student selected is a hostler, if he has an A grade is 0.69.
+\end{block}
+
+\end{frame}
+
+\end{document}
