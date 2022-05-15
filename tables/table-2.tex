@@ -186,20 +186,40 @@
 	 \gnumericPB{\centering}\gnumbox{Probabilty}
 	&\gnumericPB{\centering}\gnumbox{Description}
 \\
-	 \gnumericPB{\centering}\gnumbox{Pr(X = 0)}
-	&\gnumericPB{\centering}Student is a hostler
+\hhline{|-|-}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\centering}\gnumbox{Pr(X = 0)}}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\centering}0.6}
 \\
-	 \gnumericPB{\centering}\gnumbox{Pr(X = 1)}
-	&\gnumericPB{\centering}\gnumbox{Student is a day scholar}
+\hhline{|--|}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\centering}\gnumbox{Pr(X = 1)}}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\centering}\gnumbox{0.4}}
 \\
-	 \gnumericPB{\centering}\gnumbox{Pr(Y = 0|X = 0)}
-	&\gnumericPB{\centering}\gnumbox{Student gets an A grade}
+\hhline{|--|}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\centering}\gnumbox{Pr(Y = 0|X = 0)}}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\centering}\gnumbox{0.3}}
 \\
-	 \gnumericPB{\centering}\gnumbox{Pr(Y = 0|X = 1)}
-	&\gnumericPB{\centering}\gnumbox{Student doesn't get an A grade}
+\hhline{|--|}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\centering}\gnumbox{Pr(Y = 0|X = 1)}}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\centering}\gnumbox{0.2}}
 \\
+\hhline{|--|}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\centering}\gnumbox{Pr(X = 0|Y = 0)}}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\centering}\gnumbox{?}}
+\\
+\hhline{|-|-|}
 \end{tabular}
 \end{center}
 
 \ifthenelse{\isundefined{\languageshorthands}}{}{\languageshorthands{\languagename}}
 \gnumericTableEnd
+
